@@ -58,7 +58,7 @@ const BackstageLayout: React.FC<BackstageLayoutProps> = ({
           <Image
             loader={myNextImgLoader}
             alt="logo"
-            src={`${STATIC_ASSETS_URL}/svg/logo.svg`}
+            src={`${STATIC_ASSETS_URL}/svg/icon.png`}
             width={34}
             height={34}
             placeholder="blur"
