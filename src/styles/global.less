@@ -1,0 +1,166 @@
+@import '/src/styles/variables.less';
+@import '/src/styles/variables-css.less';
+
+html,
+body {
+  width: 100%;
+}
+
+html {
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 14px;
+  background-color: var(--primary-bg-color);
+}
+
+html,
+body,
+#root,
+#__next,
+#app {
+  height: 100%;
+}
+
+#root {
+  position: relative;
+}
+
+.icon-spin {
+  -webkit-animation: icon-spin 0.7s infinite linear;
+  animation: icon-spin 0.7s infinite linear;
+}
+
+@-webkit-keyframes icon-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes icon-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+/**
+ * 全局滚动条设置
+ */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 4px;
+  min-height: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &:hover,
+  &:active {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+// 全局Modal样式自定义
+.custom-modal-wrapper {
+  .ant-modal-header {
+    border-bottom: none;
+  }
+
+  .ant-modal-body {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .ant-modal-footer {
+    border-top: none;
+  }
+
+  .title {
+    font-weight: 600;
+  }
+
+  .text {
+    font-size: 14px;
+    color: #b7b9bf;
+    font-weight: 400;
+  }
+}
+
+// 全局DatePicker样式自定义
+.ant-picker-cell-inner {
+  border-radius: 50% !important;
+
+  &::before {
+    border-radius: 50% !important;
+  }
+}
+
+.ant-modal-footer {
+  .submit-btn-custom {
+    min-width: 68px;
+    height: 36px;
+    background: linear-gradient(96.16deg, #ff385d 0%, #ff472e 100%);
+    border: 0;
+    color: #fff !important;
+    padding: 4px 20px;
+  }
+}
+
+// 全局自定义message样式
+.ant-message-notice-content {
+  padding: 0;
+  .ant-message-error,
+  .ant-message-warning,
+  .ant-message-success {
+    background: #f6ffed;
+    border: 1px solid #73d13d;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #2e2f33;
+    font-family: PingFang SC;
+    padding: 10px 16px;
+  }
+  .ant-message-warning {
+    background: #fffbe6;
+    border: 1px solid #faad14;
+  }
+  .ant-message-error {
+    background: #fff1f0;
+    border: 1px solid rgba(255, 77, 79, 0.5);
+  }
+}

@@ -1,0 +1,119 @@
+@main-font-color: #232426;
+@main-color: #e93d34;
+@main-radius: 12px;
+
+.customMenu {
+  position: relative;
+  z-index: 999;
+  font-family: 'PingFang SC';
+  width: 200px;
+  font-size: 14px;
+  color: @main-font-color;
+  padding: 18px 0;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 41, 102, 0.03);
+
+  .item {
+    position: relative;
+    //height: 24px;
+    line-height: 14px;
+    padding: 14px 0 14px 30px;
+    font-weight: 700;
+    cursor: pointer;
+    border-left: 2px solid transparent;
+    margin-bottom: 4px;
+
+    &:hover {
+      color: @main-color;
+    }
+
+    .bgs {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+
+      .bg1 {
+        position: absolute;
+        top: -16px;
+        left: -0px;
+      }
+
+      .bg2 {
+        position: absolute;
+        left: 34px;
+        top: 0;
+      }
+    }
+  }
+
+  .item-selected {
+    color: @main-color;
+    border-left: 2px solid @main-color;
+    background-color: #fef5f5;
+  }
+
+  .subMenu {
+    margin-bottom: 4px;
+    .sub {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      height: 42px;
+      line-height: 42px;
+      padding-left: 30px;
+      border-left: 2px solid transparent;
+      cursor: pointer;
+      font-weight: 700;
+
+      &:hover {
+        color: @main-color;
+        .icon {
+          color: @main-color;
+        }
+      }
+
+      .icon {
+        position: absolute;
+        display: inline-block;
+        overflow: hidden;
+        height: 16px;
+        right: 24px;
+        top: 13px;
+        color: #9c9ea6;
+        transform: rotate(180deg);
+        transition: transform 0.3s;
+      }
+    }
+
+    .sub-open {
+      .icon {
+        transform: rotate(0deg);
+      }
+    }
+
+    .sub-actived {
+      color: @main-color;
+      font-weight: 700;
+    }
+
+    .subMenu-wrapper {
+      // height: 0;
+      // visibility: hidden;
+      transition: all 0.3s;
+    }
+
+    .subMenu-open {
+      // height: 32px;
+      visibility: visible;
+    }
+
+    .item {
+      padding-left: 56px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}

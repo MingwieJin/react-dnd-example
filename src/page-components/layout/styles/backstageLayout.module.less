@@ -1,0 +1,68 @@
+@blod-text-color: #232426;
+@brand-color: #e93d34;
+@gray-color: #5e5f66;
+
+.headerContainer {
+  position: relative;
+  z-index: 1000 !important;
+  font-family: 'PingFang SC';
+  box-shadow: 0px 0px 24px rgba(0, 20, 102, 0.06);
+  z-index: 10;
+
+  .left-header {
+    display: flex;
+    align-items: center;
+  }
+
+  .headerTitle {
+    margin: 0 8px 0 4px;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: bold;
+    color: @blod-text-color;
+  }
+
+  .roleNameContainer {
+    margin-top: 1px;
+  }
+
+  .roleName {
+    border-radius: 4px;
+    color: #fff;
+    background-color: @brand-color;
+    padding: 0 8px;
+    width: fit-content;
+    height: 18px;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  .right-header {
+    display: flex;
+    align-items: center;
+
+    .userEmail,
+    .logoutBtn {
+      color: @gray-color;
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    .logoutBtn {
+      cursor: pointer;
+      &:hover {
+        color: @brand-color;
+      }
+    }
+  }
+}
+
+.layoutContainer {
+  padding: 24px;
+  margin: 0;
+  // overflow: scroll;
+  background: transparent;
+  // flex: 1;
+  width: calc(100vw - 200px);
+}
