@@ -1,0 +1,187 @@
+@main-font-color: #232426;
+@main-color: #ff385d;
+
+.rowWrapper {
+  overflow: hidden;
+  padding: 16px 16px 0;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.rowContainer {
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 12px;
+}
+
+@media  screen and (max-width: 1810px) {
+  .rowContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media  screen and (max-width: 1366px) {
+  .rowContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+.containerTop {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+
+  .containerLeft {
+    display: flex;
+    align-items: center;
+
+    .labelContainer {
+      display: flex;
+      align-items: flex-end;
+    }
+    .largeTitle {
+      margin: 0 6px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+      color: #000;
+    }
+    .labelNum {
+      margin-right: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #000;
+    }
+    .tips {
+      font-size: 12px;
+      color: #9C9EA6;
+    }
+  }
+}
+
+//@media screen and (max-width: 600px) {
+//  .rowContainer {
+//    background-color: red;
+//  }
+//}
+
+.menuComponent {
+  transform: translate(0px, 0px);
+  border-radius: 8px;
+  border: 1px solid #E6E7EB;
+  margin-bottom: 4px;
+}
+
+.component {
+  width: 100%;
+  border: 1px solid #E6E7EB;
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+  cursor: move;
+
+  &:hover {
+    box-shadow: 0px 4px 12px 0px rgba(0, 41, 102, 0.06);
+  }
+}
+
+.componentDetail {
+  width: 100%;
+  border: 1px solid #E6E7EB;
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.draggingComponent {
+  width: 100%;
+  //background: rgba(230, 246, 255, 0.5);
+  background: #fff;
+  border: 1px dashed #2994ff;
+}
+
+.overingComponent {
+  width: 100%;
+  border: 1px solid #FF385D;
+  background: #fff;
+}
+
+
+.deleteIcon {
+  cursor: pointer;
+  color: #B0B0B0;
+
+  &:hover {
+    color: #FF4D4F;
+  }
+}
+
+
+.rightMenuItem {
+  border-radius: 8px;
+  padding: 10px 8px 10px 12px;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #5E5F66;
+
+
+  .rightMenuCountContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .rightMenuCount {
+    color: #9C9EA6;
+    background: #F0F1F5;
+    border-radius: 50%;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin-right: 8px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &:hover {
+    background: linear-gradient(to right, rgba(247, 248, 252), transparent);
+    color: @main-font-color;
+    font-weight: 600;
+
+    .rightMenuCount {
+      font-weight: 400;
+    }
+  }
+}
+
+.dragLayer {
+  position: fixed;
+  pointerEvents: none;
+  zIndex: 100;
+  left: 0;
+  top: 0;
+}
+
+.dragLayerItem {
+  border: 1px solid #E6E7EB;
+  transform: translate(0px, 0px);
+  box-shadow: 0px 2px 12px 0px #0029660F;
+  border-radius: 8px;
+  background: #fff;
+  width: 175px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  font-weight: 600;
+}
+
+.dragLayerTitle {
+  //padding: 12px 24px;
+  color: @main-color;
+  line-height: 20px;
+}

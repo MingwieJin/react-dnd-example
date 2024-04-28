@@ -1,27 +1,6 @@
 import React, {useEffect, useRef, useState, useContext, useCallback} from 'react';
-import {
-  Select,
-  Form,
-  Input,
-  Row,
-  Col,
-  Pagination,
-  Empty,
-  message,
-  Spin,
-  Table,
-  Tooltip,
-  Button,
-  Modal,
-  Drawer,
-  TableColumnProps,
-} from 'antd';
-import router from 'next/router';
-import s from './styles/missionList.less';
 
 import { useDrag, useDrop } from 'react-dnd'
-
-const {Option} = Select;
 
 /**
  * 注册组件区域
@@ -31,10 +10,6 @@ interface LayoutItem {
   type: string;
   id: string;
   componentType: string
-  // children?: LayoutItem[];
-  // component?: {
-  //   type: string;
-  // }
 }
 
 // 拖拽时候传的数据

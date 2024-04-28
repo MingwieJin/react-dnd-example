@@ -48,3 +48,48 @@ export const roleChineseName: Record<string, string> = {
 };
 
 
+export const booleanMap = {
+  否: 0,
+  是: 1,
+};
+
+// 性别选项map
+export const genderMap = {
+  不限: -1,
+  男: 1,
+  女: 0,
+};
+
+// 初始化计数
+export const initConut = {
+  population: 0, // 人口属性
+  age: 0, // 年龄
+  gender: 0, // 性别
+
+  regional: 0, // 地域属性
+  resideEstatePrice: 0, // 小区价格
+}
+
+// 二级菜单归类一级菜单
+export const transferMenuLevel: Record<string, string> = {
+  age: 'population', // 年龄
+  gender: 'population', // 性别
+
+  resideEstatePrice: 'regional', // 小区价格
+}
+
+export const resideEstatePriceMap = {
+  '0~10000': 0,
+  '10000~20000': 1,
+  '20000~30000': 2,
+  '30000~40000': 3,
+  '40000~50000': 4,
+  '50000~60000': 5,
+  '60000~70000': 6,
+  '70000~80000': 7,
+  '80000~90000': 8,
+  '90000~100000': 9,
+  '≥100000': 10,
+}
+
+

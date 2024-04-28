@@ -1,0 +1,132 @@
+@main-font-color: #232426;
+@normal-font-color: #595959;
+@main-color: #FF385D;
+@main-radius: 12px;
+@img-radius: 16px;
+
+.menu {
+  display: flex;
+  background: #fff;
+  border-radius: 12px;
+  height: 100%;
+
+  .menuLeft {
+    padding: 16px;
+    border-right: 1px solid #F2F4F7;
+    width: 192px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar-thumb {
+      background: #E6E7EB;
+    }
+  }
+
+  .menuRightContainer {
+    padding: 0;
+    width: 207px;
+  }
+
+  .menuRight {
+    padding: 0 16px;
+    height: calc(100% - 48px);
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar-thumb {
+      background: #E6E7EB;
+    }
+  }
+
+  .blankTopMenu {
+    height: 48px
+  }
+
+  .blankMenu {
+    height: calc(100vh - 210px);
+  }
+
+  .leftMenuTitle {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .leftMenuWord {
+    margin-left: 8px;
+  }
+
+  .leftMenuItem {
+    border-radius: 50px;
+    padding: 8px 8px 8px 28px;
+    cursor: pointer;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+    color: #5E5F66;
+
+    .leftMenuCount {
+      color: #9C9EA6;
+      background: #F0F1F5;
+      border-radius: 50%;
+      line-height: 20px;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    &:hover {
+      background: linear-gradient(to right, rgba(247, 248, 252), transparent);
+      color: @main-font-color;
+    }
+  }
+
+  .leftMenuItemActive {
+    border-radius: 50px;
+    padding: 8px 8px 8px 28px;
+    background: linear-gradient(to right, rgba(255, 243, 245), transparent);
+    color: @main-color;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+
+    .leftMenuCount {
+      color: @main-color;
+      background: #FCF2F2;
+      border-radius: 50%;
+      line-height: 20px;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+
+  .rightMenuTitle {
+    color: #9C9EA6;
+    font-size: 12px;
+    line-height: 17px;
+    margin: 12px 0 4px;
+  }
+
+  .rightMenuTitleFirst {
+    color: @main-font-color;
+    line-height: 20px;
+    font-weight: 600;
+    margin: 0 0 4px;
+  }
+
+  .rightMenuTopTitle {
+    background: rgba(255,255,255, 0.8);
+    padding: 20px 16px 8px 16px;
+    z-index: 99;
+    width: 185px;
+    color: @main-font-color;
+    line-height: 20px;
+    font-weight: 600;
+  }
+
+}

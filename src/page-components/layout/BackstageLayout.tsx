@@ -78,7 +78,7 @@ const BackstageLayout: React.FC<BackstageLayoutProps> = ({
         </div>
       </Header>
       <Content style={{ display: 'flex' }}>
-        <SideMenu menuOptions={menuOptions}></SideMenu>
+        {/*<SideMenu menuOptions={menuOptions}></SideMenu>*/}
         <div className={styles.layoutContainer}>{children}</div>
       </Content>
     </Layout>
